@@ -143,5 +143,5 @@ If the API is unavailable or times out, the app falls back to a locally generate
 
 **Adan Zia**
 
-BS Computer Science — Usman Institute of Technology
+BS Computer Science — UITU
 
