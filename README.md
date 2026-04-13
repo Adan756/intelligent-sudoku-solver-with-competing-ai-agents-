@@ -4,6 +4,24 @@ A fullscreen interactive application where two AI agents — DFS and BFS — com
 
 ---
 
+## Table of Contents
+
+- [Screenshots](#screenshots)
+- [Features](#features)
+- [How It Works](#how-it-works)
+- [AI Agents](#ai-agents)
+- [Algorithm Comparison](#algorithm-comparison)
+- [Project Structure](#project-structure)
+- [Getting Started](#getting-started)
+- [Controls](#controls)
+- [Dependencies](#dependencies)
+- [Sudoku API](#sudoku-api)
+- [Limitations](#limitations)
+- [Future Work](#future-work)
+- [Authors](#authors)
+
+---
+
 ## Screenshots
 
 ![Start Screen](screenshots/start_screen.png)
@@ -24,6 +42,7 @@ A fullscreen interactive application where two AI agents — DFS and BFS — com
 - Four difficulty levels: Easy, Medium, Hard, and Random
 - Puzzles fetched from a live API with a local fallback generator
 - Fullscreen dark-themed GUI built with Pygame
+- Threaded background solver keeps the UI responsive
 
 ---
 
@@ -38,11 +57,24 @@ A fullscreen interactive application where two AI agents — DFS and BFS — com
 
 ---
 
-## Algorithms
+## AI Agents
 
 **DFS Agent** uses recursive Depth-First Search with backtracking. It places numbers one at a time and backtracks when it reaches a dead end. It is fast and memory-efficient.
 
 **BFS Agent** uses Breadth-First Search, exploring board states level by level via a queue. It includes a 15-second timeout to handle complex boards gracefully.
+
+---
+
+## Algorithm Comparison
+
+| Criterion | DFS Agent | BFS Agent |
+|-----------|-----------|-----------|
+| Data Structure | Recursive call stack | Queue (deque) |
+| Memory Usage | Low | High |
+| Typical Speed | Milliseconds | Seconds to timeout |
+| Backtracking | Yes | No |
+| Timeout Guard | No | Yes (15 seconds) |
+| Typical Winner | Yes | No |
 
 ---
 
@@ -139,9 +171,27 @@ If the API is unavailable or times out, the app falls back to a locally generate
 
 ---
 
+## Limitations
+
+- BFS is inefficient for large problems due to exponential memory growth
+- No heuristic optimization is used
+- No interactive gameplay mode for human players
+
+---
+
+## Future Work
+
+- Implement heuristic algorithms such as A* and AC-3
+- Add an interactive gameplay mode for human players
+- Enhance visualization with step counters and backtrack indicators
+
+---
+
 ## Authors
 
-**Adan Zia**
-
+**Adan Zia** (24FA-024-CS)  
 BS Computer Science — UITU
 
+---
+
+*Artificial Intelligence — Mini Project I | April 2026*
