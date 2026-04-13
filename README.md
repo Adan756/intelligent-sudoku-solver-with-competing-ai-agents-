@@ -8,6 +8,7 @@ A fullscreen interactive application where two AI agents — DFS and BFS — com
 
 - [Screenshots](#screenshots)
 - [Features](#features)
+- [Motivation](#motivation)
 - [How It Works](#how-it-works)
 - [AI Agents](#ai-agents)
 - [Algorithm Comparison](#algorithm-comparison)
@@ -46,6 +47,17 @@ A fullscreen interactive application where two AI agents — DFS and BFS — com
 
 ---
 
+## Motivation
+
+This project was built to visualize and compare classical AI search algorithms 
+in an interactive and engaging way.
+
+Instead of just solving Sudoku, the goal is to demonstrate how different 
+algorithms behave under the same conditions, highlighting differences in 
+speed, memory usage, and efficiency.
+
+---
+
 ## How It Works
 
 1. Launch the app and press Enter on the start screen
@@ -72,7 +84,7 @@ A fullscreen interactive application where two AI agents — DFS and BFS — com
 | Data Structure | Recursive call stack | Queue (deque) |
 | Memory Usage | Low | High |
 | Typical Speed | Milliseconds | Seconds to timeout |
-| Backtracking | Yes | No |
+| Backtracking | Yes | Not required (explores level-wise states)
 | Timeout Guard | No | Yes (15 seconds) |
 | Typical Winner | Yes | No |
 
@@ -161,13 +173,14 @@ python main.py
 
 ## Sudoku API
 
-Puzzles are fetched from:
+Puzzles are fetched from a public API:
 
-```
 https://sudoku-api.vercel.app/api/dosuku?difficulty={difficulty}
-```
 
-If the API is unavailable or times out, the app falls back to a locally generated puzzle using a randomized backtracking solver.
+- difficulty can be: easy, medium, hard, random
+- Response includes puzzle grid and solution
+
+If the API fails, a local generator is used.
 
 ---
 
