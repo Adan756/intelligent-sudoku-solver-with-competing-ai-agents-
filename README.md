@@ -141,6 +141,6 @@ If the API is unavailable or times out, the app falls back to a locally generate
 
 ## Authors
 
-Adan Zia
+**Adan Zia**
 BS Computer Science — Usman Institute of Technology
 
