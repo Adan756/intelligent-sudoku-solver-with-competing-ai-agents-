@@ -141,10 +141,6 @@ If the API is unavailable or times out, the app falls back to a locally generate
 
 ## Authors
 
-Developed as an AI Mini Project (Project I)
+Adan Zia
+BS Computer Science — Usman Institute of Technology
 
----
-
-## License
-
-This project is for educational purposes only.
